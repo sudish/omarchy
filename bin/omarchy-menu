@@ -841,9 +841,9 @@ show_system_menu() {
   *Lock*) omarchy-system-lock ;;
   *Suspend*) systemctl suspend ;;
   *Hibernate*) systemctl hibernate ;;
-  *Logout*) omarchy-system-logout ;;
-  *Restart*) omarchy-system-reboot ;;
-  *Shutdown*) omarchy-system-shutdown ;;
+  *Logout*)   /home/sj/.local/bin/my-shutdown.sh && omarchy-system-logout ;;
+  *Restart*)  /home/sj/.local/bin/my-shutdown.sh && omarchy-system-reboot ;;
+  *Shutdown*) /home/sj/.local/bin/my-shutdown.sh && omarchy-system-shutdown ;;
   *) back_to show_main_menu ;;
   esac
 }
